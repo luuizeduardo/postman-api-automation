@@ -1,0 +1,28 @@
+{
+    "name": "my-app",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "jest-html-reporter": "^2.5.0"
+    },
+    "scripts": {
+        "test": "jest"
+    },
+    "devDependencies": {
+        "frisby": "^2.1.1",
+        "jest": "^24.5.0"
+    },
+    "jest": {
+        "reporters": [
+          "default",
+          [
+            "./node_modules/jest-html-reporter",
+            {
+              "pageTitle": "Relatório de execução",
+              "outputPath": "./report/test-report.html",
+              "dateFormat": "dd/mm/yyyy HH:MM:ss"
+            }
+          ]
+        ]
+      }
+}
