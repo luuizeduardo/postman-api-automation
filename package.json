@@ -20,7 +20,9 @@
           "endpoint": "<ADDRESS>/api/v1",
           "project": "<YOUR_PROJECT>",
           "launchname": "<YOUR_LAUNCH_NAME>",
-          "tags": [""]
+          "tags": [
+            ""
+          ]
         }
       ]
     ]
