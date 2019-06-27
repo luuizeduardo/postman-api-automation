@@ -1,38 +1,38 @@
-# Automação de APIs com Frisby.js
+# API automation with Frisby.js
 
-Este projeto visa mostrar como funciona a automação de testes funcionais de APIs com a ferramenta [Frisby.js](https://frisbyjs.com).
+This project demonstrates how to do API test automation using [Frisby.js](https://frisbyjs.com)
 
-Usamos como exemplo as APIs que o Postman disponibiliza [publicamente](https://docs.postman-echo.com/?version=latest) para esta demonstração.
+I've used the [public APIs from Postman](https://docs.postman-echo.com/?version=latest) as an example to this demonstration.
 
-## Instalação
+## Setup
 
-- Garanta que o [Node](https://nodejs.org) está instalado: `node -v`
-- Faça o clone deste projeto.
-- Na pasta onde o projeto foi clonado, rode o comando: `npm install`
+- Make sure [Node](https://nodejs.org) is installed on your machine: run `node -v` in terminal
+- Clone/Fork the project.
+- Open the terminal in the folder that the project was cloned in and run the command: `npm install`
 
-## Instalando o Report Portal localmente
+## Installing Report Portal
 
-- Caso não tenha o [Docker](https://www.docker.com/) instalado em sua máquina, realize a instalação.
+- In case you don't have [Docker](https://www.docker.com/) installed, please do so.
 
-Após a instalação do Docker, você poderá criar containers e expô-los da maneira que achar melhor. O Report Portal depende da criação de alguns containers para seu funcionamento.
+After Docker setup, you'll be able to create containers in your machine and expose them as you wish. Report Portal setup depends of some containers to work correctly.
 
-Neste repositório há um arquivo chamado `docker-compose.yml`, ele é responsável por gerenciar os containers que são necessários para subir a aplicação do Report Portal. Para usá-lo:
+The docker-compose.yml file is responsible for managing the required containers to setup the Report Portal application. In order to do that, execute the steps bellow:
 
-- Abra o terminal na pasta em que você clonou o projeto.
-- Rode os seguintes comandos:
+- Open the terminal in the folder that the project was cloned in
+- Run the commands:
   - `mkdir data/elasticsearch`
   - `chmod g+rwx data/elasticsearch`
   - `chgrp 1000 data/elasticsearch`
-    - **Obs.:** Isto é necessário apenas na instalação do report.
-- Para subir os containers com o Report, rode o seguinte comando: `docker-compose -p reportportal up -d --force-recreate`
-  - A lista completa destes comandos são encontrados na [documentação da ferramenta](https://reportportal.io/download).
+    - **PS.:** This is required only on the application setup
+- Run the command `docker-compose -p reportportal up -d --force-recreate` to start the containers
+  - The complete command list is available in the [application manual](https://reportportal.io/download))
 
-Ao finalizar a subida destes containers, você deverá ter acesso ao report através de seu navegador.
+Given that all the steps are completed successfully, you’ll have access to the report through your web browser.
 
-## Execução dos testes
+## Test execution
 
-- Para executar os testes, rode o comando: `npm test`
+- Run the command `npm test` to execute your test suit.
 
-## Links úteis
+## Useful links
 
-Existe uma [série de posts no medium](https://medium.com/serasa-consumidor/parte-1-introdu%C3%A7%C3%A3o-e-requisi%C3%A7%C3%B5es-get-6c7ec9c7c778) sobre este assunto onde mostro a construção destes testes passo a passo.
+There's a [serie of posts on medium](https://medium.com/serasa-consumidor/parte-1-introdu%C3%A7%C3%A3o-e-requisi%C3%A7%C3%B5es-get-6c7ec9c7c778) where you can find step by step how to create the test suite.

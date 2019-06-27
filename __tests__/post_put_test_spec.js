@@ -12,8 +12,8 @@ frisby.globalSetup({
   }
 });
 
-describe('Teste do método Post e Put - Postman API', function() {
-  it('deve registrar as informações de foo1', function () {
+describe('Test Post and Put methods - Postman API', function() {
+  it('must registrate the foo1 informations', function () {
     return frisby
       .post('https://postman-echo.com/post', {
         agent,
@@ -24,7 +24,7 @@ describe('Teste do método Post e Put - Postman API', function() {
         .expect('status', 200)
   });
 
-  it('deve atualizar as informações de foo1', function () {
+  it('must update the foo1 informations', function () {
     return frisby
       .put('https://postman-echo.com/put', {
         agent,
